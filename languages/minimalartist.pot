@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: minimal artist 1.0\n"
+"POT-Creation-Date: 2015-01-08 08:29+1000\n"
+"PO-Revision-Date: 2015-01-08 15:42+1000\n"
+"Last-Translator: \n"
+"Language-Team: tell the machines <isabel@tellthemachines.com>\n"
+"Language: en_150\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:9
+msgid "Sorry, nothing found."
+msgstr ""
+
+#: category.php:29 index.php:20 search.php:23 single.php:18 tag.php:29
+msgid "Posts navigation"
+msgstr ""
+
+#: category.php:30 comments.php:22 comments.php:40 index.php:22 search.php:24
+#: tag.php:30
+msgid "Newer"
+msgstr ""
+
+#: category.php:30 comments.php:21 comments.php:39 index.php:21 search.php:24
+#: tag.php:30
+msgid "Older"
+msgstr ""
+
+#: category.php:34 index.php:26 search.php:28 tag.php:34
+msgid "Sorry, no posts found."
+msgstr ""
+
+#: comments.php:20 comments.php:38
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:45
+msgid "Comments are closed."
+msgstr ""
+
+#: content.php:9
+msgid "Pages:"
+msgstr ""
+
+#: content.php:13
+msgid "Next page"
+msgstr ""
+
+#: content.php:14
+msgid "Previous page"
+msgstr ""
+
+#: content.php:15
+msgid "Page"
+msgstr ""
+
+#: functions.php:59
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:77
+msgid "Right sidebar"
+msgstr ""
+
+#: functions.php:86
+msgid "Footer widgets"
+msgstr ""
+
+#: header.php:18
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:27
+msgid "main menu"
+msgstr ""
+
+#: image.php:34
+msgid "Image navigation"
+msgstr ""
+
+#: image.php:35
+msgid "Previous"
+msgstr ""
+
+#: image.php:36
+msgid "exit gallery"
+msgstr ""
+
+#: image.php:37
+msgid "Next"
+msgstr ""
+
+#: inc/customizer.php:38
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "Disable post navigation"
+msgstr ""
+
+#: inc/customizer.php:128
+msgid "Disable page titles"
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "Remove Link Underlines"
+msgstr ""
+
+#: inc/customizer.php:166
+msgid "Change Font Size"
+msgstr ""
+
+#: search.php:7
+#, php-format
+msgid "Search results for: %s"
+msgstr ""
+
+#: single.php:19
+msgid "previous"
+msgstr ""
+
+#: single.php:20
+msgid "next"
+msgstr ""

@@ -1,0 +1,104 @@
+ /***** RESET *****/
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+body, p, h1, h2, h3 {
+	margin: 0;
+}
+
+/***** TYPE *****/
+
+body {
+	font-family: Georgia, serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+h1 {
+	font-size: 1.4em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h1,
+h2,
+h3,
+.site-title,
+.postlist {
+	font-family: 'ralewaysemibold', sans-serif;
+	font-weight: 400;
+}
+
+h4 {
+	font-size: 1.1em;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6 {
+	font-size: 0.9em;
+}
+
+pre {
+	font-family: Courier, monospace;
+	font-size: 0.9em;
+	white-space: pre-wrap;
+}
+
+/***** IMAGES *****/
+
+figure {
+	margin: 0 0 20px;
+	max-width: 100%;
+}
+
+figcaption {
+		font-size: 0.9em;
+	}
+	
+figcaption,
+.gallery-caption,
+.wp-caption,
+.wp-caption-text,
+.entry-caption p:first-child {
+ 	font-style: italic;
+}
+
+/***** POSTS AND PAGES *****/
+
+figure {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gallery figure {
+	max-width: 400px;
+}
+
+figure img {
+	margin-bottom: -6px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre {
+	margin-bottom: 30px;
+}

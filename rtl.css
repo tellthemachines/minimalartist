@@ -1,0 +1,385 @@
+/**
+ * Theme Name: Minimal Artist
+ * Description: RTL language support stylesheet. Find out more: https://codex.wordpress.org/Right_to_Left_Language_Support
+ */
+ 
+
+/***** TYPE *****/
+
+body {
+	direction: rtl;
+  	unicode-bidi: embed;
+}
+
+ol {
+	padding-left: 0;
+	padding-right: 30px;
+}
+
+/***** ACCESSIBILITY  *****/
+
+.skip:focus {
+	left: auto;
+	right: 1em;
+}
+
+
+/***** NAVIGATION *****/
+
+
+.mobile-toggle:before {
+	left: auto;
+	right: 0;
+}
+
+
+ul.sub-menu {
+	padding-right: 0;
+}
+
+.nav-next {
+	float: left;
+}
+
+.nav-previous {
+	float: right;
+}
+
+.previous-image {
+	float: right;
+	text-align: right;
+}
+
+.parent-post-link {
+	right: 33%;
+	left: auto;
+}
+
+.next-image {
+	float: left;
+	text-align: left;
+}
+
+
+
+/***** POST AND CAT INDEXES *****/
+
+.perma-title {
+	right: 10px;
+	left: auto;
+}
+
+
+/***** SINGLE POSTS AND PAGES *****/
+
+
+.postbody ul,
+.pagebody ul {
+	padding-right: 30px;
+	padding-left: 0;
+}
+
+.post-tags a {
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+.post-tags a:last-child {
+	margin-left: 0;
+}
+
+/***** COMMENT FORM *****/
+
+
+.comment-metadata {
+	right: 38px;
+	left: auto;
+}
+
+.reply {
+	text-align: left;
+}
+
+
+/***** ATTACHMENT PAGES *****/
+
+
+.imagebox .entry-caption {
+	text-align: right;
+}
+
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (min-width: 667px) {
+	
+
+	/***** STRUCTURE *****/
+
+	header {
+		text-align: right;
+	}
+	
+	.titles {
+		float: right;
+	}
+	
+	.header-men {
+		float: left;
+	}
+	
+	.side-widget {
+		margin-right:3%;
+		margin-left: auto;
+		text-align: left;
+	}
+	
+	.side-widget aside {
+		float: left;
+	}
+	
+	.footer-widget {
+		text-align: right;
+	}
+
+/***** NAVIGATION *****/
+		
+	.headmen {
+		text-align: left;
+	}
+	
+	.headmen > li {
+		margin-right: 10px;
+		margin-left: 0;
+	}
+	
+	.header-men .menu-item ul,
+	.side-widget .menu-item ul {
+		left: 0;
+		right: auto;
+		text-align: left;
+	}
+	
+	.header-men .menu-item ul li:hover > ul,
+	.header-men .menu-item ul .focus > ul {
+		right: auto;
+		left: 100%;
+	}
+	
+	.side-widget .menu .menu-item {
+		float: left;
+		clear: left;
+	}
+	
+	.side-widget .menu-item a {
+		padding-left: 2px;
+		padding-right: 20px;
+	}
+	
+	.side-widget .menu-item ul {
+		right: auto;
+		left: 100%;
+	}
+	
+	.footer-widget aside {
+		float: right;
+		margin-left: 60px;
+		margin-right: 0;
+	}
+	
+	.footer-widget aside:last-child {
+		margin-left: 0;
+	}
+	
+	.footer-widget .menu-item {
+		margin-left: 10px;
+		margin-right: 0;
+	}
+	
+	.footer-widget .menu-item:last-child {
+		margin-left: 0;
+	}
+		
+	/***** POSTS *****/
+	
+	.title {
+		text-align: right;
+	}
+	
+	
+	/***** MAIN POST INDEX AND CATEGORIES *****/
+	
+	.permalink {
+		float: right;
+		margin-left: 8.5%;
+		margin-right: 3px;
+	}
+	
+	.permalink:nth-child(2n+2) {
+		margin-left: 0;
+	}
+	
+	.permalink:nth-child(2n+1) {
+		clear: right;
+	}
+
+
+	/***** POSTS *****/
+	
+	.postbody p,
+	.postbody pre,
+	.postbody ul,
+	.postbody ol,
+	.postbody h1,
+	.postbody h2,
+	.postbody h3,
+	.postbody h4,
+	.postbody h5,
+	.postbody h6 {
+		text-align: right;
+	}
+
+
+	/***** POSTS SINGLE IMAGES *****/
+	
+	
+	figcaption {
+		text-align: right;
+	}
+	
+	
+	/***** POSTS GALLERIES *****/
+	
+	.gallery-item {
+		float: right;
+	}
+	
+	.gallery-columns-2 figure:nth-child(odd) {
+		clear: right;
+	}
+	
+	.gallery-columns-3 figure {
+       margin-left: 6.5%;
+       margin-right: 0;     
+	}
+	
+	.gallery-columns-3 figure:nth-child(3n+3){
+		margin-left: 0;
+	}
+	
+	.gallery-columns-3 figure:nth-child(3n+4){
+		clear: right;
+	}
+	
+	.gallery-columns-4 figure,
+	.gallery-columns-5 figure,
+	.gallery-columns-6 figure,
+	.gallery-columns-7 figure,
+	.gallery-columns-8 figure,
+	.gallery-columns-9 figure {
+		margin-left: 5%;
+		margin-right: 0;    
+	}
+	
+	.gallery-columns-4 figure:nth-child(4n+4),
+	.gallery-columns-5 figure:nth-child(4n+4),
+	.gallery-columns-6 figure:nth-child(4n+4),
+	.gallery-columns-7 figure:nth-child(4n+4),
+	.gallery-columns-8 figure:nth-child(4n+4),
+	.gallery-columns-9 figure:nth-child(4n+4) {
+		margin-left: 0;
+	}
+	
+	.gallery-columns-4 figure:nth-child(4n+5),
+	.gallery-columns-5 figure:nth-child(4n+5),
+	.gallery-columns-6 figure:nth-child(4n+5),
+	.gallery-columns-7 figure:nth-child(4n+5),
+	.gallery-columns-8 figure:nth-child(4n+5),
+	.gallery-columns-9 figure:nth-child(4n+5) {
+		clear: right;
+	}
+	
+}
+
+@media screen and (min-width: 1024px){
+	
+	
+	/***** 	MAIN AND CATS INDEXES *****/
+	
+	.permalink, 
+	.permalink:nth-child(2n+2) {
+		float: right;
+		margin-left: 5.5%;
+		margin-right: 3px;
+	}
+	
+	.permalink:nth-child(3n+3) {
+		margin-left: 0;
+	}
+	
+	.permalink:nth-child(2n+1) {
+		clear: none;
+	}
+	
+	.permalink:nth-child(3n+1) {
+		clear: right;
+	}
+	
+	
+	/***** IMAGE GALLERIES *****/
+	
+	
+	.gallery-columns-5 figure,
+	.gallery-columns-5 figure:nth-child(4n+4) {
+       margin-left: 3.7%;
+       margin-right: 0;     
+	}
+	
+	.gallery-columns-6 figure,
+	.gallery-columns-6 figure:nth-child(4n+4) {
+       margin-left: 3.2%;
+       margin-right: 0;     
+	}
+		 
+	.gallery-columns-7 figure,
+	.gallery-columns-7 figure:nth-child(4n+4) {
+		margin-left: 3.8%;
+		margin-right: 0;     
+	}
+	
+	.gallery-columns-8 figure,
+	.gallery-columns-8 figure:nth-child(4n+4) {
+       margin-left: 3.4%;
+       margin-right: 0;     
+	}
+	
+	.gallery-columns-9 figure,
+	.gallery-columns-9 figure:nth-child(4n+4) {
+       margin-left: 3.5%;
+       margin-right: 0;     
+	}
+	
+	.gallery-columns-5 figure:nth-child(5n+5),
+	.gallery-columns-6 figure:nth-child(6n+6),
+	.gallery-columns-7 figure:nth-child(7n+7),
+	.gallery-columns-8 figure:nth-child(8n+8),
+	.gallery-columns-9 figure:nth-child(9n+9) {
+		margin-left: 0;
+	}
+	
+	.gallery-columns-5 figure:nth-child(4n+5),
+	.gallery-columns-6 figure:nth-child(4n+5),
+	.gallery-columns-7 figure:nth-child(4n+5),
+	.gallery-columns-8 figure:nth-child(4n+5),
+	.gallery-columns-9 figure:nth-child(4n+5) {
+		clear: none;
+	}
+	
+	.gallery-columns-5 figure:nth-child(5n+6),
+	.gallery-columns-6 figure:nth-child(6n+7),
+	.gallery-columns-7 figure:nth-child(7n+8),
+	.gallery-columns-8 figure:nth-child(8n+9),
+	.gallery-columns-9 figure:nth-child(9n+10) {
+		clear: right;
+	}
+}
