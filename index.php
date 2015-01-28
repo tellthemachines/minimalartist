@@ -17,7 +17,6 @@
 	 ?>
 	</ul>
 	 <nav id="nav-main" class="navs" role="navigation" aria-label="<?php _e( 'Posts navigation', 'minart' ); ?>">
-	 	<h2 class="screenread"><?php _e( 'Posts navigation', 'minart' ); ?></h2>
 	 	<span class="nav-prev"><?php next_posts_link( __( 'Older', 'minart')); ?></span>
 	 	<span class="nav-next"><?php previous_posts_link(__('Newer', 'minart')); ?> </span>
 	 </nav>
