@@ -3,13 +3,9 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width" />
-		<?php if ( is_home () ) : ?><meta name="description" content="<?php bloginfo('description'); ?>"><?php endif; ?>
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-	
-
-<?php
-	
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">	
+<?php	
 	wp_head();
 ?>
 	</head>

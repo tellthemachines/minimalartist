@@ -120,7 +120,6 @@ add_action('wp_print_styles', 'minart_load_fonts');
 function minart_editor_styles() {
 
 	add_editor_style( '/css/editor-style.css' );
-
 }
 
 add_action( 'init', 'minart_editor_styles' );
@@ -128,6 +127,8 @@ add_action( 'init', 'minart_editor_styles' );
 //enqueue scripts
 
 function minart_scripts() {
+	
+	wp_enqueue_style( 'minart-style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'minart-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20140825', true );
 	

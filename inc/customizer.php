@@ -240,9 +240,9 @@ add_action( 'customize_register', 'minart_register_theme_customizer' );
 function minart_customizer_css() {
 	?>
     <style type="text/css">
-    	body { color: <?php echo get_theme_mod( 'minart_text_color' ); ?>; }
-        a { color: <?php echo get_theme_mod( 'minart_link_color' ); ?>; }   
-  		body, .perma-title, .menu-item { background: <?php echo get_theme_mod( 'minart_back_color' ); ?>; } 
+    	body { color: <?php echo esc_attr(get_theme_mod( 'minart_text_color' )); ?>; }
+        a { color: <?php echo esc_attr(get_theme_mod( 'minart_link_color' )); ?>; }   
+  		body, .perma-title, .menu-item { background: <?php echo esc_attr(get_theme_mod( 'minart_back_color' )); ?>; } 
         
         <?php if( true === get_theme_mod( 'minart_post_nav' ) ) : ?>
     		#nav-single { display: none; }
