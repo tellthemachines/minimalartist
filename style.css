@@ -4,19 +4,19 @@
  * Description: A responsively beautiful art portfolio.
  * Author: Isabel Brison
  * Author URI: http://tellthemachines.com
- * Version: 0.3
+ * Version: 1.0
  * Tags: one-column, white, black, right-sidebar, custom-background, custom-colors, editor-style, featured-images, full-width-template, rtl-language-support, responsive-layout, accessibility-ready, translation-ready
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: minart
  */
- 
+
 
  /***** RESET *****/
- 
+
  *, *:before, *:after {
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -36,7 +36,7 @@ body, p, h1, h2, h3 {
 
 .cf:before,
 .cf:after {
-    content: " "; 
+    content: " ";
     display: table;
 }
 
@@ -48,9 +48,10 @@ body, p, h1, h2, h3 {
 
 body {
 	font-family: Georgia, serif;
-	font-size: 16px;
+	font-size: 100%;
 	line-height: 1.4;
 	color: #000;
+	background: #fff;
 }
 
 h1 {
@@ -129,13 +130,13 @@ input {
 	font-size: 1em;
 }
 
-table, 
-th, 
+table,
+th,
 td {
 border: 1px solid;
 }
 
-th, 
+th,
 td {
 	padding: 5px;
 }
@@ -159,14 +160,14 @@ figure.gallery-item a,
 	margin: 0;
 }
 
-a:focus, 
-input:focus, 
+a:focus,
+input:focus,
 button:focus,
 textarea:focus,
 .imagebox a:focus > img,
 .perma-image a:focus > img,
 figure a[rel~="attachment"]:focus,
-a:focus > img {	
+a:focus > img {
 	outline: 3px solid #16B4D0;
 }
 
@@ -183,11 +184,11 @@ a > img {
 
 /* hide text for screen readers and skip to main content link */
 
-.screenread, 
+.screenread,
 .screen-reader-text {
 	position: absolute;
-	height: 1px; 
-	width: 1px; 
+	height: 1px;
+	width: 1px;
 	overflow: hidden;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
@@ -203,8 +204,7 @@ a > img {
 	border-radius: 3px;
 	border: 2px solid #666;
 	color: #666;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 100%;
 	font-weight: bold;
 	padding: 15px 23px 14px;
 	z-index: 100000;
@@ -222,7 +222,7 @@ a > img {
 
 /***** IMAGES *****/
 
-.size-auto, 
+.size-auto,
 .size-full,
 .size-large,
 .size-medium,
@@ -240,8 +240,8 @@ a > img {
 }
 
  .alignleft {
-	float: left;	
-	margin: 0 60px 20px 0;	
+	float: left;
+	margin: 0 60px 20px 0;
 }
 
 .aligncenter {
@@ -257,7 +257,7 @@ figure {
 figcaption {
 		font-size: 0.9em;
 	}
-	
+
 figcaption,
 .gallery-caption,
 .wp-caption,
@@ -418,7 +418,12 @@ ul.sub-menu {
 
 .perma-title {
 	font-size: 1em;
-	text-decoration: none;
+	font-weight: 400;
+  font-family: Georgia, serif;
+}
+
+.perma-has-img{
+  text-decoration: none;
 	position: absolute;
 	bottom: 10px;
 	left: 10px;
@@ -436,7 +441,7 @@ ul.sub-menu {
 /***** SINGLE POSTS AND PAGES *****/
 
 
-.postbody, 
+.postbody,
 .pagebody {
 	overflow: hidden;
 }
@@ -451,7 +456,7 @@ ul.sub-menu {
 	list-style: disc;
 	padding-left: 30px;
 }
- 
+
 figure {
 	margin-left: auto;
 	margin-right: auto;
@@ -500,7 +505,7 @@ figure img {
 	margin-bottom: 20px;
 }
 
-.logged-in-as, 
+.logged-in-as,
 .form-allowed-tags,
 .comment-notes {
 	font-size: 0.8em;
@@ -626,8 +631,8 @@ figure img {
 
 /***** MEDIA QUERIES *****/
 
-@media screen and (min-width: 667px) {
-	
+@media screen and (min-width: 41em) {
+
 	/***** RESIZABLE EMBEDS *****/
 
 	.wp-video,
@@ -635,45 +640,45 @@ figure img {
 		width: 60%;
 		height: 60%;
 	}
-	
+
 	.mejs-audio {
 		max-width: 60%;
 		margin: 0 auto 40px;
 	}
-	
+
 	/***** STRUCTURE *****/
-	
+
 	.container {
 		width: 90%;
 		margin-top: 20px;
 	}
-	
+
 	header {
 		text-align: left;
 		margin-bottom: 60px;
 	}
-	
+
 	.titles {
 		float: left;
 		max-width: 48%;
 	}
-	
+
 	.header-men {
 		float: right;
 		margin-top: 0;
 		max-width: 48%;
 	}
-	
+
 	.main {
 		overflow: hidden;
 	}
-	
+
 	.main.hasside {
 		display: inline-block;
 		vertical-align: top;
 		width: 69%;
 	}
-	
+
 	.side-widget {
 		display: inline-block;
 		vertical-align: top;
@@ -683,45 +688,46 @@ figure img {
 		border: 0;
 		text-align: right;
 	}
-	
+
 	.side-widget aside {
 		float: right;
+    clear: right;
 	}
-	
+
 	.side-widget li {
 		margin-bottom: 5px;
 	}
-	
+
 	.widgetit,
 	.widgetit a {
 		font-size: 1em;
 		margin-bottom: 10px;
 	}
-	
+
 	.widgetit a img {
 		display: none;
 	}
-	
+
 	.footer-widget {
 		text-align: left;
 	}
 
 /***** NAVIGATION *****/
-	
+
 	.mobile-toggle {
 		display: none;
 	}
-		
+
 	.headmen {
 		display: block;
 		text-align: right;
 	}
-	
+
 	.headmen > li {
 		margin-top: 2px;
 		margin-left: 10px;
 	}
-	
+
 	.menu-item {
 		display: inline-block;
 		vertical-align: top;
@@ -730,13 +736,13 @@ figure img {
 		padding: 1px;
 		margin-top: 2px;
 	}
-	
+
 	.menu-item a {
 		white-space: nowrap;
 		padding: 5px 2px;
 		margin: 3px;
 	}
-	
+
 	.header-men .menu-item ul,
 	.side-widget .menu-item ul {
 		position: absolute;
@@ -744,111 +750,122 @@ figure img {
 		right: 0;
 		z-index: 10;
 		text-align: right;
-		display: none;
+  	height: 1px;
+  	width: 1px;
+  	overflow: hidden;
+  	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  	clip: rect(1px, 1px, 1px, 1px);
 	}
-	
+
 	.sub-menu {
 		margin: 0;
 	}
-	
-	.header-men .menu-item:hover > ul, 
+
+	.header-men .menu-item:hover > ul,
 	.header-men .menu-item.focus > ul {
-		display: block;
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: visible;
 	}
-	
+
 	.menu-item ul li {
 		width: 100%;
 	}
-	
+
 	.header-men .menu-item ul li:hover > ul,
 	.header-men .menu-item ul .focus > ul {
 		top: 0;
 		right: 100%;
 		left: auto;
-		display: block;
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: visible;
 	}
-	
+
 	.widget-area .menu {
 		overflow: visible;
 		width: 100%;
 		padding: 2px;
 	}
-	
+
 	.side-widget .menu .menu-item {
 		float: right;
 		clear: right;
 	}
-	
+
 	.side-widget .menu-item a {
 		padding: 5px 2px 5px 20px;
 	}
-	
+
 	.side-widget .menu-item ul {
 		top: 0;
 		right: 100%;
 	}
-	
-	.side-widget .menu-item:hover > ul, 
+
+	.side-widget .menu-item:hover > ul,
 	.side-widget .menu-item.focus > ul {
 		display: block;
 	}
-	
+
 	.footer-widget {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
-	
+
 	.footer-widget aside {
 		float: left;
 		margin-right: 60px;
 	}
-	
+
 	.footer-widget aside:last-child {
 		margin-right: 0;
 	}
-	
+
 	.footer-widget .menu-item {
 		margin-right: 10px;
 	}
-	
+
 	.footer-widget .menu-item:last-child {
 		margin-right: 0;
 	}
-	
+
 	.footer-widget .menu-item ul li {
 		width: auto;
 		display: block;
 	}
 
-	
+
 	/***** POSTS *****/
-	
+
 	.title {
 		text-align: left;
 		margin-bottom: 40px;
 	}
-	
-	
+
+
 	/***** MAIN POST INDEX AND CATEGORIES *****/
-	
+
 	.permalink {
 		float: left;
 		width: 45%;
+		max-width: none;
 		margin: 3px 8.5% 50px 3px;
 	}
-	
+
 	.permalink:nth-child(2n+2) {
 		margin-right: 0;
 	}
-	
+
 	.permalink:nth-child(2n+1) {
 		clear: left;
 	}
 
 
 	/***** POSTS *****/
-	
+
 	.postbody {
 		text-align: center;
 	}
@@ -868,7 +885,7 @@ figure img {
 
 
 	/***** POSTS SINGLE IMAGES *****/
-	
+
 	.postbody img,
 	.pagebody img,
 	.image-att img {
@@ -880,96 +897,72 @@ figure img {
 	figcaption {
 		text-align: left;
 	}
-	
-	
+
+
 	/***** POSTS GALLERIES *****/
-	
+
 	.gallery {
 		overflow: hidden;
 		margin-bottom: 0;
-		display: inline-block;
 	}
-	
+
 	.gallery-item {
 		float: left;
 		overflow: hidden;
+    text-align: left;
 	}
-	
+
+  .gallery-icon img {
+    width: 100%;
+  }
+
 	.gallery-columns-1 .gallery-item {
 		margin: 0 auto 40px auto;
 		float: none;
 	}
-	
+
 	.gallery-columns-2 {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		
+
 	}
-	
+
 	.gallery-columns-2 figure {
        width: 42%;
-       margin: 0 4% 40px;     
+       min-width: 42%;
+       margin: 0 4% 40px;
 	}
-	
-	.hasside .gallery-columns-2 img {
-		max-height: 220px;
-	}
-	
+
 	.gallery-columns-2 figure:nth-child(odd) {
 		clear: left;
 	}
-	
+
 	.gallery-columns-3 figure {
        width: 29%;
-       margin: 0 6.5% 60px 0;     
+       min-width: 29%;
+       margin: 0 6.5% 60px 0;
 	}
-	
-	.gallery-columns-3 img {
-		max-height: 220px;
-	}
-	
-	.hasside .gallery-columns-3 img {
-		max-height: 180px;
-	}
-	
+
 	.gallery-columns-3 figure:nth-child(3n+3){
 		margin-right: 0;
 	}
-	
+
 	.gallery-columns-3 figure:nth-child(3n+4){
 		clear: left;
 	}
-	
+
 	.gallery-columns-4 figure,
 	.gallery-columns-5 figure,
 	.gallery-columns-6 figure,
 	.gallery-columns-7 figure,
 	.gallery-columns-8 figure,
 	.gallery-columns-9 figure {
-     	width: 21%;
+    width: 21%;
+    min-width: 21%;
 		margin: 0 5% 60px 0;
-		max-height: 280px;     
 	}
-	
-	.gallery-columns-4 img,
-	.gallery-columns-5 img,
-	.gallery-columns-6 img,
-	.gallery-columns-7 img,
-	.gallery-columns-8 img,
-	.gallery-columns-9 img {
-		max-height: 160px;
-	}
-	
-	.hasside .gallery-columns-4 img,
-	.hasside .gallery-columns-5 img,
-	.hasside .gallery-columns-6 img,
-	.hasside .gallery-columns-7 img,
-	.hasside .gallery-columns-8 img,
-	.hasside .gallery-columns-9 img {
-		max-height: 120px;
-	}
-	
+
 	.gallery-columns-4 figure:nth-child(4n+4),
 	.gallery-columns-5 figure:nth-child(4n+4),
 	.gallery-columns-6 figure:nth-child(4n+4),
@@ -978,7 +971,7 @@ figure img {
 	.gallery-columns-9 figure:nth-child(4n+4) {
 		margin-right: 0;
 	}
-	
+
 	.gallery-columns-4 figure:nth-child(4n+5),
 	.gallery-columns-5 figure:nth-child(4n+5),
 	.gallery-columns-6 figure:nth-child(4n+5),
@@ -987,143 +980,88 @@ figure img {
 	.gallery-columns-9 figure:nth-child(4n+5) {
 		clear: left;
 	}
-	
+
 	/***** ATTACHMENT PAGES *****/
-	
+
 	.imagebox {
 		margin-bottom: 40px;
 	}
 }
 
-@media screen and (min-width: 1024px){
-	
+@media screen and (min-width: 64em){
+
 	.main.hasside {
 		width: 79%;
 	}
-	
+
 	.side-widget {
 		width: 17%;
 	}
-	
+
 	/***** 	MAIN AND CATS INDEXES *****/
-	
-	.permalink, 
+
+	.permalink,
 	.permalink:nth-child(2n+2) {
 		float: left;
 		width: 29%;
 		margin: 3px 5.5% 60px 3px;
 	}
-	
+
 	.permalink:nth-child(3n+3) {
 		margin-right: 0;
 	}
-	
+
 	.permalink:nth-child(2n+1) {
 		clear: none;
 	}
-	
+
 	.permalink:nth-child(3n+1) {
 		clear: left;
 	}
-	
+
 	/***** POSTS *****/
-	
+
 	.comments {
 		width: 60%;
 	}
-	
+
 	/***** IMAGE GALLERIES *****/
-	
-	.hasside .gallery-columns-2 img {
-		max-height: none;
-	}
-	
-	.gallery-columns-3 img {
-		max-height: none;
-	}
-	
-	.hasside .gallery-columns-3 img {
-		max-height: 220px;
-	}
-	
-	.gallery-columns-4 img {
-		max-height: 220px;
-	}
-	
-	.hasside .gallery-columns-4 img {
-		max-height: 170px;
-	}
-	
+
 	.gallery-columns-5 figure,
 	.gallery-columns-5 figure:nth-child(4n+4) {
-       width: 17%;
-       margin: 0 3.7% 20px 0;     
+     width: 17%;
+     min-width: 17%;
+     margin: 0 3.7% 20px 0;
 	}
-	
-	.gallery-columns-5 img {
-		max-height: 200px;
-	}
-	
-	.hasside .gallery-columns-5 img {
-		max-height: 140px;
-	}
-	
+
 	.gallery-columns-6 figure,
 	.gallery-columns-6 figure:nth-child(4n+4) {
-       width: 14%;
-       margin: 0 3.2% 20px 0;     
+     width: 14%;
+     min-width: 14%;
+     margin: 0 3.2% 20px 0;
 	}
-	
-	.gallery-columns-6 img {
-		max-height: 160px;
-	}
-	
-	.hasside .gallery-columns-6 img {
-		max-height: 110px;
-	}
-	
+
 	.gallery-columns-7 figure,
 	.gallery-columns-7 figure:nth-child(4n+4) {
-       width: 11%;
-		margin: 0 3.8% 20px 0;     
+    width: 11%;
+    min-width: 11%;
+		margin: 0 3.8% 20px 0;
 	}
-	
-	.gallery-columns-7 img {
-		max-height: 130px;
-	}
-	
-	.hasside .gallery-columns-7 img {
-		max-height: 80px;
-	}
-	
+
 	.gallery-columns-8 figure,
 	.gallery-columns-8 figure:nth-child(4n+4) {
-       width: 9.5%;
-       margin: 0 3.4% 20px 0;     
+     width: 9.5%;
+     min-width: 9.5%;
+     margin: 0 3.4% 20px 0;
 	}
-	
-	.gallery-columns-8 img {
-		max-height: 110px;
-	}
-	
-	.hasside .gallery-columns-8 img {
-		max-height: 70px;
-	}
-	
+
 	.gallery-columns-9 figure,
 	.gallery-columns-9 figure:nth-child(4n+4) {
        width: 8%;
-       margin: 0 3.5% 20px 0;     
+       min-width: 8%;
+       margin: 0 3.5% 20px 0;
 	}
-	
-	.gallery-columns-9 img {
-		max-height: 90px;
-	}
-	
-	.hasside .gallery-columns-9 img {
-		max-height: 60px;
-	}
-	
+
 	.gallery-columns-5 figure:nth-child(5n+5),
 	.gallery-columns-6 figure:nth-child(6n+6),
 	.gallery-columns-7 figure:nth-child(7n+7),
@@ -1131,7 +1069,7 @@ figure img {
 	.gallery-columns-9 figure:nth-child(9n+9) {
 		margin-right: 0;
 	}
-	
+
 	.gallery-columns-5 figure:nth-child(4n+5),
 	.gallery-columns-6 figure:nth-child(4n+5),
 	.gallery-columns-7 figure:nth-child(4n+5),
@@ -1139,7 +1077,7 @@ figure img {
 	.gallery-columns-9 figure:nth-child(4n+5) {
 		clear: none;
 	}
-	
+
 	.gallery-columns-5 figure:nth-child(5n+6),
 	.gallery-columns-6 figure:nth-child(6n+7),
 	.gallery-columns-7 figure:nth-child(7n+8),
