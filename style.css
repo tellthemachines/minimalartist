@@ -4,7 +4,7 @@
  * Description: A responsively beautiful art portfolio.
  * Author: Isabel Brison
  * Author URI: http://tellthemachines.com
- * Version: 1.0
+ * Version: 1.1
  * Tags: one-column, white, black, right-sidebar, custom-background, custom-colors, editor-style, featured-images, full-width-template, rtl-language-support, responsive-layout, accessibility-ready, translation-ready
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,6 +18,10 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 ul{
@@ -85,7 +89,8 @@ h4,
 h5,
 h6,
 .site-title,
-.postlist {
+.postlist,
+legend {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 }
@@ -115,30 +120,88 @@ acronym[title] {
 	cursor: help;
 }
 
+form > * {
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: 0;
+  padding: 10px 0;
+  margin: 0 0 10px;
+}
+
+label {
+  margin: 0;
+  font-size: 0.9em;
+}
+
 textarea,
-input {
+input,
+select {
 	max-width: 100%;
-	margin-bottom: 10px;
+	margin: 2px 2px 10px 2px;
 	border: 1px solid;
 	color: inherit;
 	background: inherit;
+  padding: 5px;
 }
 
-input {
-	height: 36px;
+button {
+  margin: 2px 2px 10px 2px;
+}
+
+textarea {
+  min-width: 240px;
+  min-height: 100px;
+}
+
+input,
+select,
+button {
+	height: 32px;
 	font-family: Georgia, serif;
-	font-size: 1em;
+	font-size: .9em;
 }
 
-table,
-th,
-td {
-border: 1px solid;
+input[type=radio],
+input[type=checkbox] {
+  height: auto;
+  margin: 5px 5px 2px 2px;
+}
+
+input[type=file] {
+  height: auto;
+}
+
+table {
+  border: 1px solid;
+  border-spacing: 0;
 }
 
 th,
 td {
-	padding: 5px;
+  padding: 5px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+td:first-child {
+  text-align: right;
+}
+
+th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+tbody tr:last-child th,
+tr:last-child td {
+  border-bottom: 0;
+}
+
+hr {
+  border-top: 1px solid;
+  border-bottom: 0;
 }
 
 /***** ACCESSIBILITY  *****/
@@ -147,7 +210,7 @@ td {
 
 a,
 .imagebox a img {
-	margin: 3px;
+	margin: 2px;
 }
 
 figure > a,
@@ -164,17 +227,25 @@ a:focus,
 input:focus,
 button:focus,
 textarea:focus,
+select:focus,
 .imagebox a:focus > img,
 .perma-image a:focus > img,
 figure a[rel~="attachment"]:focus,
 a:focus > img {
-	outline: 3px solid #16B4D0;
+	outline: 2px solid #16B4D0;
 }
 
+.main:focus,
 .imagebox a:focus,
 .perma-image a:focus,
 figure a:focus > img,
-a[rel~="attachment"]:focus {
+a[rel~="attachment"]:focus,
+a:active,
+button:active,
+.imagebox a:active > img,
+.perma-image a:active > img,
+figure a[rel~="attachment"]:active,
+a:active > img {
 	outline: none;
 }
 
@@ -317,8 +388,9 @@ header {
 	top: 4px;
 	left: 0;
 	height: 20px;
-	border-top: 12px double #666;
-	border-bottom: 4px solid #666;
+	border-top: 12px double;
+	border-bottom: 4px solid;
+  color: inherit;
 	font-size: 22px;
 }
 
@@ -577,31 +649,49 @@ figure img {
 	display: none;
 }
 
+.attachment,
+.attachment .container,
 .image-att {
-	text-align: center;
+  height: 100%;
+}
+
+.image-att {
+  text-align: center;
+}
+
+.image-att .navs {
+  height: auto;
+  margin-bottom: 0;
 }
 
 .imagebox {
 	display: inline-block;
 	max-width: 100%;
 	margin-bottom: 20px;
+  height: 85%;
 }
 
 .imagebox a {
 	margin: 0;
+  height: 100%;
+  display: block;
 }
 
 .attachbox {
 	margin-bottom: 10px;
+  height: 90%;
 }
 
 .attachbox img {
-	max-width: 98%;
-	height: auto;
+  max-width: none;
+  width: auto;
+  height: 100%;
 }
 
 .imagebox .entry-caption {
-	text-align: left;
+  overflow: hidden;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 /***** WIDGETS *****/
@@ -866,29 +956,11 @@ figure img {
 
 	/***** POSTS *****/
 
-	.postbody {
-		text-align: center;
-	}
-
-	.postbody p,
-	.postbody pre,
-	.postbody ul,
-	.postbody ol,
-	.postbody h1,
-	.postbody h2,
-	.postbody h3,
-	.postbody h4,
-	.postbody h5,
-	.postbody h6 {
-		text-align: left;
-	}
-
 
 	/***** POSTS SINGLE IMAGES *****/
 
 	.postbody img,
-	.pagebody img,
-	.image-att img {
+	.pagebody img {
 		width: auto;
 		max-width: 100%;
 		height: auto;
@@ -982,6 +1054,10 @@ figure img {
 	}
 
 	/***** ATTACHMENT PAGES *****/
+
+  .image-att {
+    overflow: visible;
+  }
 
 	.imagebox {
 		margin-bottom: 40px;

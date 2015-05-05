@@ -2,7 +2,7 @@
  * Theme Name: Minimal Artist
  * Description: RTL language support stylesheet. Find out more: https://codex.wordpress.org/Right_to_Left_Language_Support
  */
- 
+
 
 /***** TYPE *****/
 
@@ -14,6 +14,22 @@ body {
 ol {
 	padding-left: 0;
 	padding-right: 30px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  margin: 5px 2px 2px 5px;
+}
+
+th,
+td {
+  border-left: 1px solid;
+  border-right: 0;
+}
+
+th:last-child,
+td:last-child {
+  border-left: 0;
 }
 
 /***** ACCESSIBILITY  *****/
@@ -112,120 +128,120 @@ ul.sub-menu {
 /***** MEDIA QUERIES *****/
 
 @media screen and (min-width: 667px) {
-	
+
 
 	/***** STRUCTURE *****/
 
 	header {
 		text-align: right;
 	}
-	
+
 	.titles {
 		float: right;
 	}
-	
+
 	.header-men {
 		float: left;
 	}
-	
+
 	.side-widget {
 		margin-right:3%;
 		margin-left: auto;
 		text-align: left;
 	}
-	
+
 	.side-widget aside {
 		float: left;
 	}
-	
+
 	.footer-widget {
 		text-align: right;
 	}
 
 /***** NAVIGATION *****/
-		
+
 	.headmen {
 		text-align: left;
 	}
-	
+
 	.headmen > li {
 		margin-right: 10px;
 		margin-left: 0;
 	}
-	
+
 	.header-men .menu-item ul,
 	.side-widget .menu-item ul {
 		left: 0;
 		right: auto;
 		text-align: left;
 	}
-	
+
 	.header-men .menu-item ul li:hover > ul,
 	.header-men .menu-item ul .focus > ul {
 		right: auto;
 		left: 100%;
 	}
-	
+
 	.side-widget .menu .menu-item {
 		float: left;
 		clear: left;
 	}
-	
+
 	.side-widget .menu-item a {
 		padding-left: 2px;
 		padding-right: 20px;
 	}
-	
+
 	.side-widget .menu-item ul {
 		right: auto;
 		left: 100%;
 	}
-	
+
 	.footer-widget aside {
 		float: right;
 		margin-left: 60px;
 		margin-right: 0;
 	}
-	
+
 	.footer-widget aside:last-child {
 		margin-left: 0;
 	}
-	
+
 	.footer-widget .menu-item {
 		margin-left: 10px;
 		margin-right: 0;
 	}
-	
+
 	.footer-widget .menu-item:last-child {
 		margin-left: 0;
 	}
-		
+
 	/***** POSTS *****/
-	
+
 	.title {
 		text-align: right;
 	}
-	
-	
+
+
 	/***** MAIN POST INDEX AND CATEGORIES *****/
-	
+
 	.permalink {
 		float: right;
 		margin-left: 8.5%;
 		margin-right: 3px;
 	}
-	
+
 	.permalink:nth-child(2n+2) {
 		margin-left: 0;
 	}
-	
+
 	.permalink:nth-child(2n+1) {
 		clear: right;
 	}
 
 
 	/***** POSTS *****/
-	
+
 	.postbody p,
 	.postbody pre,
 	.postbody ul,
@@ -241,36 +257,36 @@ ul.sub-menu {
 
 
 	/***** POSTS SINGLE IMAGES *****/
-	
-	
+
+
 	figcaption {
 		text-align: right;
 	}
-	
-	
+
+
 	/***** POSTS GALLERIES *****/
-	
+
 	.gallery-item {
 		float: right;
 	}
-	
+
 	.gallery-columns-2 figure:nth-child(odd) {
 		clear: right;
 	}
-	
+
 	.gallery-columns-3 figure {
        margin-left: 6.5%;
-       margin-right: 0;     
+       margin-right: 0;
 	}
-	
+
 	.gallery-columns-3 figure:nth-child(3n+3){
 		margin-left: 0;
 	}
-	
+
 	.gallery-columns-3 figure:nth-child(3n+4){
 		clear: right;
 	}
-	
+
 	.gallery-columns-4 figure,
 	.gallery-columns-5 figure,
 	.gallery-columns-6 figure,
@@ -278,9 +294,9 @@ ul.sub-menu {
 	.gallery-columns-8 figure,
 	.gallery-columns-9 figure {
 		margin-left: 5%;
-		margin-right: 0;    
+		margin-right: 0;
 	}
-	
+
 	.gallery-columns-4 figure:nth-child(4n+4),
 	.gallery-columns-5 figure:nth-child(4n+4),
 	.gallery-columns-6 figure:nth-child(4n+4),
@@ -289,7 +305,7 @@ ul.sub-menu {
 	.gallery-columns-9 figure:nth-child(4n+4) {
 		margin-left: 0;
 	}
-	
+
 	.gallery-columns-4 figure:nth-child(4n+5),
 	.gallery-columns-5 figure:nth-child(4n+5),
 	.gallery-columns-6 figure:nth-child(4n+5),
@@ -298,67 +314,67 @@ ul.sub-menu {
 	.gallery-columns-9 figure:nth-child(4n+5) {
 		clear: right;
 	}
-	
+
 }
 
 @media screen and (min-width: 1024px){
-	
-	
+
+
 	/***** 	MAIN AND CATS INDEXES *****/
-	
-	.permalink, 
+
+	.permalink,
 	.permalink:nth-child(2n+2) {
 		float: right;
 		margin-left: 5.5%;
 		margin-right: 3px;
 	}
-	
+
 	.permalink:nth-child(3n+3) {
 		margin-left: 0;
 	}
-	
+
 	.permalink:nth-child(2n+1) {
 		clear: none;
 	}
-	
+
 	.permalink:nth-child(3n+1) {
 		clear: right;
 	}
-	
-	
+
+
 	/***** IMAGE GALLERIES *****/
-	
-	
+
+
 	.gallery-columns-5 figure,
 	.gallery-columns-5 figure:nth-child(4n+4) {
        margin-left: 3.7%;
-       margin-right: 0;     
+       margin-right: 0;
 	}
-	
+
 	.gallery-columns-6 figure,
 	.gallery-columns-6 figure:nth-child(4n+4) {
        margin-left: 3.2%;
-       margin-right: 0;     
+       margin-right: 0;
 	}
-		 
+
 	.gallery-columns-7 figure,
 	.gallery-columns-7 figure:nth-child(4n+4) {
 		margin-left: 3.8%;
-		margin-right: 0;     
+		margin-right: 0;
 	}
-	
+
 	.gallery-columns-8 figure,
 	.gallery-columns-8 figure:nth-child(4n+4) {
        margin-left: 3.4%;
-       margin-right: 0;     
+       margin-right: 0;
 	}
-	
+
 	.gallery-columns-9 figure,
 	.gallery-columns-9 figure:nth-child(4n+4) {
        margin-left: 3.5%;
-       margin-right: 0;     
+       margin-right: 0;
 	}
-	
+
 	.gallery-columns-5 figure:nth-child(5n+5),
 	.gallery-columns-6 figure:nth-child(6n+6),
 	.gallery-columns-7 figure:nth-child(7n+7),
@@ -366,7 +382,7 @@ ul.sub-menu {
 	.gallery-columns-9 figure:nth-child(9n+9) {
 		margin-left: 0;
 	}
-	
+
 	.gallery-columns-5 figure:nth-child(4n+5),
 	.gallery-columns-6 figure:nth-child(4n+5),
 	.gallery-columns-7 figure:nth-child(4n+5),
@@ -374,7 +390,7 @@ ul.sub-menu {
 	.gallery-columns-9 figure:nth-child(4n+5) {
 		clear: none;
 	}
-	
+
 	.gallery-columns-5 figure:nth-child(5n+6),
 	.gallery-columns-6 figure:nth-child(6n+7),
 	.gallery-columns-7 figure:nth-child(7n+8),
